@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>José Cordero  Portafolio</title>
+  <meta name="description" content="Portafolio personal de José Eduardo Cordero Segarra: presentación, experiencia y contacto. Accesible y responsivo." />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="img/jose.jpg" alt="Retrato de José Cordero" class="avatar" />
+        <div>
+          <h1 class="site-title">José Eduardo Cordero Segarra</h1>
+          <p class="site-subtitle">Estudiante de Sistemas Computacionales  UCACUE</p>
+        </div>
+      </div>
+
+      <button id="menuBtn" class="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Abrir o cerrar menú">
+        
+      </button>
+
+      <nav id="nav" class="site-nav" role="navigation" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#presentacion" aria-current="page">Presentación</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="site-main" role="main">
+    <!-- Presentación -->
+    <section id="presentacion" class="section section-hero" aria-labelledby="titulo-presentacion">
+      <div class="container grid-two">
+        <div>
+          <h2 id="titulo-presentacion">Presentación</h2>
+          <p>
+            Soy una persona eficaz en mi trabajo y me adapto fácilmente a cualquier problema que pueda surgir.
+            Poseo excelentes habilidades de comunicación y atención, y tengo gran facilidad para el trabajo en equipo.
+            Me entusiasma aprender constantemente y desarrollar nuevas habilidades para contribuir de manera significativa.
+          </p>
+
+          <ul class="list-tags" aria-label="Aptitudes destacadas">
+            <li>Trabajo en equipo</li>
+            <li>Aprendizaje continuo</li>
+            <li>Puntualidad y responsabilidad</li>
+            <li>Comunicación</li>
+            <li>Resolución de problemas</li>
+            <li>Pensamiento crítico y analítico</li>
+            <li>Adaptabilidad</li>
+          </ul>
+
+          <div class="edu" aria-label="Formación académica">
+            <h3>Formación</h3>
+            <ul>
+              <li><strong>Unidad Educativa Hermano Miguel de la Salle</strong>  Bachiller en Ciencias</li>
+              <li><strong>Universidad Católica de Cuenca (UCACUE)</strong>  Sistemas Computacionales, Tercer Ciclo</li>
+            </ul>
+          </div>
+
+          <div class="contact-mini" role="contentinfo" aria-label="Datos de contacto rápidos">
+            <p><strong>Tel.:</strong> <a href="tel:+593983574354">+593 98 357 4354</a></p>
+            <p><strong>Email:</strong> <a href="mailto:joseeduc.2005@gmail.com">joseeduc.2005@gmail.com</a></p>
+          </div>
+        </div>
+
+        <aside class="aside-card" aria-label="Logros destacados">
+          <h3>Logro</h3>
+          <p>Diploma de la Organización Bachillerato Internacional en Monografía de Matemática.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Portafolio / Experiencia -->
+    <section id="portafolio" class="section" aria-labelledby="titulo-portafolio">
+      <div class="container">
+        <h2 id="titulo-portafolio">Portafolio</h2>
+        <p class="section-lead">Proyectos representativos (académicos y personales).</p>
+
+        <div class="portfolio-grid" role="list">
+          <article class="card" role="listitem">
+            <h3>GastroCuenca  Base de Datos y Backend</h3>
+            <p>Sistema de recomendaciones gastronómicas en Cuenca con 30+ tablas, triggers y procedimientos almacenados.</p>
+            <ul class="meta">
+              <li><span class="badge">MySQL</span></li>
+              <li><span class="badge">Node/Express</span></li>
+              <li><span class="badge">PL/SQL</span></li>
+            </ul>
+            <a class="btn" href="#" aria-label="Ver más sobre GastroCuenca (enlace de ejemplo)">Ver más</a>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3>Smart Trash Bin  IoT</h3>
+            <p>Basurero inteligente con sensor ultrasónico y micro servo SG90. Diseño mecánico y lógica de control.</p>
+            <ul class="meta">
+              <li><span class="badge">ESP32</span></li>
+              <li><span class="badge">Arduino</span></li>
+              <li><span class="badge">Tinkercad</span></li>
+            </ul>
+            <a class="btn" href="#" aria-label="Ver más sobre Smart Trash Bin (enlace de ejemplo)">Ver más</a>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3>Noticias Deportes  Frontend + API</h3>
+            <p>SPA sencilla con API de noticias propia, galería de imágenes y módulos de autenticación.</p>
+            <ul class="meta">
+              <li><span class="badge">HTML/CSS/JS</span></li>
+              <li><span class="badge">REST</span></li>
+              <li><span class="badge">JWT</span></li>
+            </ul>
+            <a class="btn" href="#" aria-label="Ver más sobre Noticias Deportes (enlace de ejemplo)">Ver más</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <p>¿Quieres conversar sobre un proyecto o colaboración? Escríbeme.</p>
+
+        <form class="contact-form" action="#" method="post" aria-describedby="ayuda-contacto">
+          <p id="ayuda-contacto" class="sr-only">Todos los campos son obligatorios. El correo debe tener un formato válido.</p>
+
+          <div class="form-field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required autocomplete="name" />
+          </div>
+
+          <div class="form-field">
+            <label for="correo">Correo</label>
+            <input id="correo" name="correo" type="email" required autocomplete="email" placeholder="nombre@example.com" />
+          </div>
+
+          <div class="form-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+
+          <fieldset class="form-field" aria-labelledby="redes-legend">
+            <legend id="redes-legend">Redes sociales</legend>
+            <div class="checkboxes">
+              <div>
+                <input type="checkbox" id="rs-ig" name="redes" value="instagram" />
+                <label for="rs-ig">Instagram</label>
+              </div>
+              <div>
+                <input type="checkbox" id="rs-li" name="redes" value="linkedin" />
+                <label for="rs-li">LinkedIn</label>
+              </div>
+              <div>
+                <input type="checkbox" id="rs-gh" name="redes" value="github" />
+                <label for="rs-gh">GitHub</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="btn primary" type="submit">Enviar</button>
+          <p class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p> <span id="year"></span> José Cordero</p>
+      <nav aria-label="Enlaces secundarios">
+        <a href="#presentacion">Arriba</a>
+        <a href="#portafolio">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

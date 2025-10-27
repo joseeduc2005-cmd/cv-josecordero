@@ -1,0 +1,36 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap");
+
+:root{
+  --text:#212529; --muted:#495057; --primary:#003366; --border:#dee2e6;
+}
+
+*{ box-sizing: border-box; margin:0; padding:0; }
+body{ font-family:"Inter",sans-serif; color:var(--text); background:#fff; }
+.container{ width:min(800px,92%); margin:40px auto; }
+
+h1,h2{ font-family:"Merriweather",serif; color:var(--primary); }
+h1{ font-size:2rem; margin-bottom:.25rem; }
+h2{ font-size:1.15rem; margin:1.2rem 0 .6rem; border-bottom:2px solid var(--primary); padding-bottom:.25rem; }
+
+.cv-header .subtitle{ color:var(--muted); margin-bottom:.25rem; }
+.cv-header .contact a{ color:#0d6efd; text-decoration:none; }
+.cv-header .contact a:hover{ text-decoration:underline; }
+
+.item{ margin-bottom:.8rem; }
+.item-head{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; }
+.item-head .meta{ color:var(--muted); font-size:.95rem; }
+.item ul{ margin-left:1.1rem; margin-top:.3rem; }
+.skills .columns{
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.25rem .75rem; list-style:none; margin-top:.25rem; padding-left:0;
+}
+.skills .columns li::before{
+  content:" "; color:var(--primary); margin-right:.25rem;
+}
+
+/* Imprimir a PDF limpio */
+@media print{
+  @page{ margin:18mm; }
+  a{ color:inherit; text-decoration:none; }
+  .container{ margin:0; width:100%; }
+}

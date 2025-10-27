@@ -1,0 +1,164 @@
+﻿/* ======== Estilo Harvard Professional Portfolio (corregido) ======== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+  --bg: #f8f9fa;
+  --text: #212529;
+  --muted: #495057;
+  --primary: #003366;
+  --accent: #0d6efd;
+  --card: #ffffff;
+  --border: #dee2e6;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html:focus-within{ scroll-behavior: smooth; }
+
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container{ width: min(1100px, 90%); margin: 0 auto; }
+
+h1, h2, h3{ font-family: 'Merriweather', serif; font-weight: 700; color: var(--primary); }
+h1{ font-size: 2.2rem; margin-bottom: .3rem; }
+h2{
+  margin-top: 2rem; margin-bottom: .6rem;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block; padding-bottom: .3rem;
+}
+p{ margin-bottom: 1rem; }
+
+a{ color: var(--accent); text-decoration: none; }
+a:hover, a:focus{ text-decoration: underline; }
+
+/* ===== Header ===== */
+.site-header{ background: var(--card); border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
+.header-inner{ display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.brand{ display: flex; align-items: center; gap: 1rem; }
+.avatar{ width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); }
+.site-title{ font-family: 'Merriweather', serif; font-size: 1.8rem; }
+.site-subtitle{ color: var(--muted); font-size: 1rem; }
+
+/* ===== Navegación ===== */
+.site-nav ul{ list-style: none; display: flex; gap: 1.2rem; }
+.site-nav a{ color: var(--primary); font-weight: 500; }
+.site-nav a[aria-current="page"]{ border-bottom: 2px solid var(--accent); padding-bottom: .2rem; }
+
+/* ===== Secciones ===== */
+.section{ padding: 2rem 0; }
+.grid-two{ display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+
+/* ===== Chips/Aptitudes (quitar viñetas) ===== */
+.list-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; padding-left:0; list-style:none; }
+.list-tags li{ background: var(--card); border:1px solid var(--border); border-radius:999px; padding:.4rem .8rem; font-size:.9rem; }
+.list-tags li::marker{ content:''; }
+
+/* ===== Aside ===== */
+.aside-card{
+  background: var(--card); border:1px solid var(--border); border-radius: var(--radius);
+  padding: 1rem 1.2rem; box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+/* ===== Portafolio ===== */
+.portfolio-grid{
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
+  gap: 1.5rem; margin-top: 1rem;
+}
+.card{
+  background: var(--card); border:1px solid var(--border); border-radius: var(--radius);
+  padding: 1rem 1.2rem; box-shadow: 0 3px 8px rgba(0,0,0,.05);
+}
+.meta{ display:flex; gap:.5rem; padding-left:0; list-style:none; margin:.4rem 0 0 0; }
+.meta li::marker{ content:''; }
+
+.badge{
+  display:inline-block; background: var(--accent); color:#fff; border-radius:12px;
+  padding:.25rem .6rem; font-size:.8rem;
+}
+
+/* ===== Formulario ===== */
+.contact-form{ display:grid; gap:1rem; max-width:600px; }
+.form-field{ display:grid; gap:.4rem; }
+label{ font-weight:600; }
+
+input, textarea{
+  width:100%; padding:.6rem .8rem; border-radius: var(--radius);
+  border:1px solid var(--border); font-size:1rem; background:#fff;
+}
+input:focus-visible, textarea:focus-visible{ outline:2px solid var(--accent); }
+
+fieldset.form-field{
+  border:1px solid var(--border); border-radius: var(--radius);
+  padding:1rem; margin-top:.2rem;
+}
+legend{ padding:0 .25rem; color:var(--primary); font-weight:700; }
+
+.checkboxes{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(120px,1fr));
+  gap:.75rem 1.25rem; align-items:center; margin-top:.2rem;
+}
+.checkboxes div{ display:flex; align-items:center; gap:.5rem; }
+input[type="checkbox"]{ width:1rem; height:1rem; }
+
+/* Botones */
+.btn{
+  background: var(--accent); color:#fff; border:none; border-radius: var(--radius);
+  padding:.6rem 1.2rem; font-size:1rem; font-weight:600; cursor:pointer;
+}
+.btn:hover, .btn:focus-visible{ background:#002b5c; }
+
+/* ===== Footer ===== */
+.site-footer{ border-top:1px solid var(--border); background: var(--card); padding:1rem 0; text-align:center; font-size:.95rem; color:var(--muted); }
+.site-footer a{ color: var(--accent); margin-left:1rem; }
+
+/* ===== Accesibilidad ===== */
+:focus-visible{ outline-offset: 2px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 800px){
+  .grid-two{ grid-template-columns: 1fr; }
+  .header-inner{ flex-direction: column; text-align:center; }
+  .site-nav ul{ flex-wrap: wrap; justify-content:center; }
+  .checkboxes{ grid-template-columns: 1fr; }
+}
+/* --- FIX: evitar que se choque el botón con los badges en Portafolio --- */
+.portfolio-grid .card{ 
+  display: flex;             /* fuerza layout vertical */
+  flex-direction: column; 
+}
+
+.portfolio-grid .card h3{ margin-bottom: .25rem; }
+.portfolio-grid .card p{ margin-bottom: .25rem; }
+
+.portfolio-grid .card .meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style: none;
+  padding: 0;
+  margin: .6rem 0 .6rem 0;   /* MÁS aire arriba/abajo */
+}
+
+.portfolio-grid .card .badge{
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;            /* altura uniforme */
+  margin: 0;                 /* sin márgenes extra */
+}
+
+.portfolio-grid .card .btn{
+  margin-top: .5rem;         /* separación clara del bloque de badges */
+  align-self: flex-start;    /* evita estiramiento raro en móviles */
+}
+.card a:focus-visible{
+  outline: 3px solid #0d6efd;
+  outline-offset: 3px;
+  border-radius: 10px;
+}
